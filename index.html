@@ -95,7 +95,7 @@
 
   /* ===== HERO ===== */
   .hero{min-height:100vh; display:flex; align-items:center; padding-top:110px; position:relative; border-bottom:none;}
-  .hero-web{position:absolute; width:150px; height:150px; opacity:0.85; pointer-events:none; z-index:1;}
+  .hero-web{position:absolute; width:190px; height:190px; opacity:0.85; pointer-events:none; z-index:1;}
   .hero-web.tl{top:96px; left:18px;}
   .hero-web.br{bottom:24px; right:18px;}
   .hero-web img{width:100%; height:100%; object-fit:contain;}
@@ -287,6 +287,92 @@
   .footer-bottom a:hover{color:var(--red);}
   .social-links{display:flex; gap:20px;}
 
+
+  /* ===== REQUESTED IMAGE ENHANCEMENTS ===== */
+  .about-bg-web{
+    position:absolute; top:8%; width:260px; height:420px;
+    opacity:0.11; pointer-events:none; z-index:0; transform-origin:top center;
+  }
+  .about-bg-web img{width:100%; height:100%; object-fit:contain;}
+  .about-web-left{left:70px;}
+   .about-web-right{right:-70px;top:0; transform:scaleX(-1);} 
+
+  .experience-hero-pose{
+    position:absolute; bottom:70px; right:22px; width:190px; z-index:1;
+    pointer-events:none; transform-origin:top center;
+  }
+  .experience-hero-pose img{
+    width:100%; height:auto; display:block;
+    filter:drop-shadow(0 12px 18px rgba(0,0,0,0.16));
+  }
+
+  .projects-hanging-pose{
+    position:absolute; top:20px; left:3%; width:190px; z-index:1;
+    pointer-events:none; display:flex; flex-direction:column;
+    align-items:center; transform-origin:top center;
+  }
+  .projects-web-thread{
+    width:1px; height:115px;
+    background:linear-gradient(to bottom, transparent, var(--ink) 18%, var(--ink));
+  }
+  .projects-hanging-pose img{
+    width:100%; height:auto; display:block;
+    filter:drop-shadow(0 12px 18px rgba(0,0,0,0.15));
+  }
+
+  .education-study{
+    position:absolute; right:5%; bottom:8%; width:150px;
+    z-index:1; pointer-events:none;
+  }
+  .education-study img{
+    width:100%; height:auto; display:block;
+    filter:drop-shadow(0 10px 16px rgba(0,0,0,0.12));
+  }
+  .education-web{
+    position:absolute; top:-35px; left:-55px; width:240px; height:360px;
+    opacity:0.10; z-index:0; pointer-events:none; transform-origin:top center;
+  }
+  .education-web img{width:100%; height:100%; object-fit:contain;}
+
+  .interests-movie{
+    position:absolute; right:5%; bottom:8%; width:145px;
+    z-index:1; pointer-events:none;
+  }
+  .interests-movie img{
+    width:100%; height:auto; display:block;
+    filter:drop-shadow(0 10px 16px rgba(0,0,0,0.12));
+  }
+  .interests-web{
+    position:absolute; top:-30px; right:-45px; width:240px; height:360px;
+    opacity:0.10; z-index:0; pointer-events:none; transform-origin:top center;
+  }
+  .interests-web img{width:100%; height:100%; object-fit:contain;}
+
+  @media (max-width: 900px){
+    .experience-hero-pose{width:125px; top:60px; right:8px; opacity:0.8;}
+    .projects-hanging-pose{width:135px; right:10px; top:10px; opacity:0.8;}
+    .projects-web-thread{height:75px;}
+    .education-study,.interests-movie{width:105px; opacity:0.75; right:4%; bottom:5%;}
+    .education-web,.interests-web{width:170px; height:270px; opacity:0.07;}
+    .about-bg-web{width:170px; height:300px; opacity:0.07;}
+    .about-web-left{left:-80px;}
+    .about-web-right{right:-80px;}
+  }
+
+  @media (max-width: 640px){
+    .hero-web{width:110px; height:110px;}
+    .hero-web.tl{top:145px; left:0;}
+    .hero-web.br{bottom:10px; right:0;}
+    .experience-hero-pose{width:90px; top:48px; right:2px; opacity:0.62;}
+    .projects-hanging-pose{width:95px; right:2px; top:8px; opacity:0.62;}
+    .projects-web-thread{height:55px;}
+    .education-study,.interests-movie{width:80px; opacity:0.58; right:2%;}
+    .education-web,.interests-web{width:125px; height:210px; opacity:0.055;}
+    .about-bg-web{width:120px; height:230px; opacity:0.055;}
+    .about-web-left{left:-65px;}
+    .about-web-right{right:-65px;}
+  }
+
   /* ===== RESPONSIVE ===== */
   @media (max-width: 900px){
     section{padding:90px 0;}
@@ -297,7 +383,7 @@
     .hero-sub{margin-left:auto; margin-right:auto;}
     .hero-actions{justify-content:center;}
     .hero-meta{justify-content:center;}
-    .hero-web{width:100px; height:100px;}
+    .hero-web{width:120px; height:120px;}
     .hero-web.tl{top:150px; left:8px;}
     .about-grid{grid-template-columns:1fr; gap:56px; text-align:center;}
     .about-copy{perspective:none;}
@@ -354,8 +440,8 @@
   <!-- ===== HERO ===== -->
   <section class="hero" id="hero-section">
 
-    <div class="hero-web tl" id="webTL"><img src="Web.png" alt="" /></div>
-    <div class="hero-web br" id="webBR"><img src="Web.png" alt="" /></div>
+    <div class="hero-web tl" id="webTL"><img src="assets/Web.png" alt="" /></div>
+    <div class="hero-web br" id="webBR"><img src="assets/Web.png" alt="" /></div>
 
     <div class="wrap">
       <div class="hero-copy">
@@ -378,15 +464,15 @@
         </div>
         <div class="hero-meta" id="hero-meta">
           <div><strong>4+ yrs</strong>Experience</div>
-          <div><strong>3</strong>Companies</div>
-          <div><strong>4</strong>Certifications</div>
+          
+          <div><strong>20+</strong>Projects</div>
         </div>
       </div>
 
       <div class="hero-visual">
         <div class="reveal-frame" id="reveal-frame">
-          <img class="img-base" src="without-mask.jpg" alt="Kesavaram" />
-          <img class="img-top" id="reveal-top" src="with-mask.jpg" alt="Kesavaram" />
+          <img class="img-base" src="assets/without-mask.jpg" alt="Kesavaram" />
+          <img class="img-top" id="reveal-top" src="assets/with-mask.jpg" alt="Kesavaram" />
           <span class="reveal-tag">Hover to reveal</span>
         </div>
       </div>
@@ -404,14 +490,15 @@
 
   <!-- ===== ABOUT ===== -->
   <section id="about">
-    <div class="about-bg-web" id="about-bg-web"><img src="Web.png" alt="" /></div>
+    <div class="about-bg-web about-web-left" id="about-web-left"><img src="assets/Web.png" alt="" /></div>
+    <div class="about-bg-web about-web-right" id="about-web-right"><img src="assets/hanging.png" alt="" /></div>
 
     <div class="wrap about-grid">
       <div class="hang-column">
         <div class="hang-object" id="hang-object">
           <div class="thread"></div>
           <div class="profile-frame" id="profile-frame">
-            <img src="My-Original-pic.jpeg" alt="Kesavaram R" />
+            <img src="assets/My-Original-pic.jpeg" alt="Kesavaram R" />
           </div>
         </div>
       </div>
@@ -425,7 +512,7 @@
         <div id="about-paras">
           <p>By day, I'm a <strong>Software Engineer</strong> with a track record of building solutions in <strong>C# and ASP.NET Core</strong>, working across MVC and API architecture for enterprise and financial systems.</p>
           <p>My days are spent designing clean, maintainable back-ends — the kind that hold up under audit and under load. I bring strong problem-solving and organizational skills to cross-functional teams, and a proactive habit of picking up new technology before it's asked of me.</p>
-          <p>Outside of production code, I'm exploring graduate research at the intersection of <strong>agentic AI and financial systems</strong> — autonomous fraud detection in particular, where my banking domain background is proving to be a real asset.</p>
+          <p>Beyond traditional software development, I'm enthusiastic about <strong>AI and Generative AI</strong> — exploring how intelligent technologies can be integrated into real-world applications to create smarter, more efficient, and innovative solutions.</p>
         </div>
         <div class="pill-row" id="pill-row">
           <span class="pill">C#</span><span class="pill">.NET Core</span><span class="pill">ASP.NET</span>
@@ -438,7 +525,9 @@
 
   <!-- ===== EXPERIENCE ===== -->
   <section id="experience">
-    <div class="mascot-swing" id="mascot-swing"><img src="assets/Hanging-Pose.png" alt="" /></div>
+    <div class="experience-hero-pose" id="experience-hero-pose">
+      <img src="assets/Hero-Pose.png" alt="Spider-Man hero pose" />
+    </div>
     <div class="wrap">
       <div class="section-head reveal-up"><div class="eyebrow"><svg class="spider-ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="currentColor" stroke="none"/><path d="M12 2v7M12 15v7M2 12h7M15 12h7M4.9 4.9l5 5M14.1 14.1l5 5M19.1 4.9l-5 5M9.9 14.1l-5 5" stroke="currentColor"/></svg>Experience</div><h2><span>Where I've built things.</span></h2></div>
       <div class="timeline">
@@ -487,13 +576,19 @@
         <h2><span>Selected work.</span></h2>
         <p>Placeholder entries below — swap in real project images and details any time.</p>
       </div>
+      <div class="projects-hanging-pose" id="projects-hanging-pose" aria-hidden="true">
+        <div class="projects-web-thread"></div>
+        <img src="assets/Hanging-Pose.png" alt="" />
+      </div>
       <div class="projects-grid" id="projects-grid"></div>
-      <div class="project-placeholder-note reveal-up">These are dummy projects. Edit the <code>projects</code> array near the bottom of this file (search for "PROJECTS DATA") — set each <code>image</code> field to your real screenshot path (e.g. <code>assets/project-1.jpg</code>) to replace the placeholder thumbnails.</div>
+      <!-- <div class="project-placeholder-note reveal-up">These are dummy projects. Edit the <code>projects</code> array near the bottom of this file (search for "PROJECTS DATA") — set each <code>image</code> field to your real screenshot path (e.g. <code>assets/project-1.jpg</code>) to replace the placeholder thumbnails.</div> -->
     </div>
   </section>
 
   <!-- ===== EDUCATION + CERTS ===== -->
   <section id="education">
+    <div class="education-web" id="education-web" aria-hidden="true"><img src="assets/Web.png" alt="" /></div>
+    <!-- <div class="education-study" id="education-study"><img src="assets/study.avif" alt="Study" /></div> -->
     <div class="wrap two-col">
       <div class="reveal-up">
         <div class="section-head" style="margin-bottom:40px;"><div class="eyebrow"><svg class="spider-ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="currentColor" stroke="none"/><path d="M12 2v7M12 15v7M2 12h7M15 12h7M4.9 4.9l5 5M14.1 14.1l5 5M19.1 4.9l-5 5M9.9 14.1l-5 5" stroke="currentColor"/></svg>Education</div><h2><span>Academic background.</span></h2></div>
@@ -514,6 +609,8 @@
 
   <!-- ===== INTERESTS ===== -->
   <section id="interests">
+    <div class="interests-web" id="interests-web" aria-hidden="true"><img src="assets/Web.png" alt="" /></div>
+    <div class="interests-movie" id="interests-movie"><img src="assets/movie.png" alt="Movies" /></div>
     <div class="wrap">
       <div class="section-head reveal-up"><div class="eyebrow"><svg class="spider-ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="currentColor" stroke="none"/><path d="M12 2v7M12 15v7M2 12h7M15 12h7M4.9 4.9l5 5M14.1 14.1l5 5M19.1 4.9l-5 5M9.9 14.1l-5 5" stroke="currentColor"/></svg>Beyond Work</div><h2><span>Interests.</span></h2></div>
       <div class="interests-row reveal-up">
@@ -568,9 +665,9 @@
      to swap out the placeholder thumbnail.
   ========================================================= */
   const projects = [
-    { title: "Project One", blurb: "Short description of what this project does and the problem it solves. Replace with your real project summary.", tags: ["C#", ".NET Core", "SQL"], image: "", links: { live: "#", code: "#" } },
-    { title: "Project Two", blurb: "Short description of what this project does and the problem it solves. Replace with your real project summary.", tags: ["API", "Clean Architecture"], image: "", links: { live: "#", code: "#" } },
-    { title: "Project Three", blurb: "Short description of what this project does and the problem it solves. Replace with your real project summary.", tags: ["Flutter", "JWT Auth"], image: "", links: { live: "#", code: "#" } }
+    { title: "Seylan pawning", blurb: "Seylan Pawning App is a banking application for managing pawning transactions, payments, and customer records.", tags: ["C#", ".NET Core", "SQL"], image: "/assets/Pawning.png", links: { live: "#", code: "#" } },
+    { title: "SEYLAN SDMS", blurb: "SDMS (Security Document Management System) is an application designed to securely manage, store, track, and retrieve banking documents and records efficiently.", tags: ["API", "Clean Architecture"], image: "/assets/SDMS.png", links: { live: "#", code: "#" } },
+    { title: "KOTRAM Tech lab page", blurb: "The KOTRAM TECH Labs landing page showcases the company’s software development and AI solutions, services, technologies, and innovative digital projects.", tags: ["Flutter", "JWT Auth"], image: "/assets/Kotram.png", links: { live: "#", code: "#" } }
   ];
   const grid = document.getElementById('projects-grid');
   grid.innerHTML = projects.map((p, i) => `
@@ -662,8 +759,10 @@
     if (!reduceMotion) {
       gsap.to('#webTL', { scale: 1.12, duration: 3.2, repeat: -1, yoyo: true, ease: 'sine.inOut' });
       gsap.to('#webBR', { scale: 1.15, duration: 3.6, repeat: -1, yoyo: true, ease: 'sine.inOut', delay: 0.4 });
-      gsap.to('#about-bg-web', { rotate: 360, duration: 140, repeat: -1, ease: 'none' });
-      gsap.to('#about-bg-web', { opacity: 0.08, duration: 4, repeat: -1, yoyo: true, ease: 'sine.inOut' });
+      gsap.to('#about-web-left', { rotate: 3.5, x: 5, duration: 3.2, repeat: -1, yoyo: true, ease: 'sine.inOut', transformOrigin: 'top center' });
+      gsap.to('#about-web-right', { rotate: -3.5, x: -5, duration: 3.6, repeat: -1, yoyo: true, ease: 'sine.inOut', transformOrigin: 'top center' });
+      gsap.to('#about-web-left, #about-web-right', { opacity: 0.12, duration: 4, repeat: -1, yoyo: true, ease: 'sine.inOut' });
+      gsap.to('#education-web, #interests-web', { rotate: 3, y: 8, duration: 3.8, repeat: -1, yoyo: true, ease: 'sine.inOut', transformOrigin: 'top center' });
     }
 
     /* ---- Cursor mask reveal on hero image ---- */
@@ -709,13 +808,15 @@
       });
     }
 
-    /* ---- Experience mascot: swing in + idle sway ---- */
-    gsap.from('#mascot-swing', {
-      y: -140, opacity: 0, duration: 1.1, ease: 'elastic.out(1,0.5)',
+    /* ---- Experience Hero pose: float in + idle movement ---- */
+    gsap.from('#experience-hero-pose', {
+      y: -100, opacity: 0, duration: 1.1, ease: 'elastic.out(1,0.5)',
       scrollTrigger: { trigger: '#experience', start: 'top 75%', once: true }
     });
     if (!reduceMotion) {
-      gsap.to('#mascot-swing', { rotate: 6, duration: 2.2, repeat: -1, yoyo: true, ease: 'sine.inOut', transformOrigin: 'top center', delay: 1.2 });
+      gsap.to('#experience-hero-pose', { y: -10, rotate: 3, duration: 2.8, repeat: -1, yoyo: true, ease: 'sine.inOut', transformOrigin: 'top center', delay: 1.1 });
+      gsap.to('#projects-hanging-pose', { rotate: 4, y: 8, duration: 2.7, repeat: -1, yoyo: true, ease: 'sine.inOut', transformOrigin: 'top center', delay: 0.8 });
+      gsap.to('#education-study, #interests-movie', { y: -8, rotate: 2, duration: 2.8, repeat: -1, yoyo: true, ease: 'sine.inOut', transformOrigin: 'center center', delay: 1 });
     }
 
     /* ---- Footer mascot: float in + idle float ---- */
@@ -726,6 +827,16 @@
     if (!reduceMotion) {
       gsap.to('#footer-mascot', { y: -18, duration: 2.4, repeat: -1, yoyo: true, ease: 'sine.inOut', delay: 1.2 });
     }
+
+    /* ---- New section image entrances ---- */
+    gsap.from('#projects-hanging-pose', {
+      opacity: 0, y: -80, duration: 1.0, ease: 'power3.out',
+      scrollTrigger: { trigger: '#projects', start: 'top 75%', once: true }
+    });
+    gsap.from('#education-study, #education-web, #interests-movie, #interests-web', {
+      opacity: 0, y: 35, duration: 0.9, stagger: 0.12, ease: 'power3.out',
+      scrollTrigger: { trigger: '#education, #interests', start: 'top 80%', once: true }
+    });
 
     /* ---- Section headings + eyebrows reveal ---- */
     gsap.utils.toArray('.section-head h2 span').forEach((el) => {
